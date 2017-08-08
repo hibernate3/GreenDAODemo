@@ -2,23 +2,33 @@ package com.example.greendaodemo.entity;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Id;
 
 /**
  * Created by Administrator on 2017/5/24 0024.
  */
 @Entity
-public class UserEntity {
+public class User {
+    @Id
+    private Long id;
     private String name;
     private String password;
     private int age;
-    @Generated(hash = 1962109100)
-    public UserEntity(String name, String password, int age) {
+    @Generated(hash = 1624463169)
+    public User(Long id, String name, String password, int age) {
+        this.id = id;
         this.name = name;
         this.password = password;
         this.age = age;
     }
-    @Generated(hash = 1433178141)
-    public UserEntity() {
+    @Generated(hash = 586692638)
+    public User() {
+    }
+    public Long getId() {
+        return this.id;
+    }
+    public void setId(Long id) {
+        this.id = id;
     }
     public String getName() {
         return this.name;
